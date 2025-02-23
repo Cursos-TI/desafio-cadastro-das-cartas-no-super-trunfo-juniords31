@@ -3,20 +3,25 @@
 //Teste JUNIOR SOUZA
 
 int main() {
+    //Declaração de variaveis
     char estado;
-    int cidade;
+    char codigodacarta;
+    char nomedacidade;
     int populacao;
     float area;
     float pib;
     int pontos_turisticos;
 
 
-
+// Entrada de dados
     printf("Digite o estado (A-H): ");
     scanf("%c" ,&estado);
 
-    printf("Digite a cidade (1-4): ");
-    scanf("%d", &cidade);
+    printf("Digite o código da carta (1-4)");
+    scaf("%c", &codigodacarta);
+
+    printf("Digite o nome da cidade : ");
+    scanf("%c", &nomedacidade);
 
     printf("Digite a populacao da cidade:" );
     scanf("%d", &populacao);
@@ -31,7 +36,7 @@ int main() {
     scanf("%d", &pontos_turisticos);
 
 
-
+// saída de dados
     printf("Dados do pais: \n");
     printf("Letra do estado: %c\n", estado);
     printf("Numero da cidade: %d\n", cidade);
