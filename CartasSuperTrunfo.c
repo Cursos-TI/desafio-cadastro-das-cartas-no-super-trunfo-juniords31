@@ -39,7 +39,10 @@ int main() {
     pib_per_capita1 = pib1 / (float)populacao1;
 
     // Calcular super poder
-    super_poder1 = populacao1 + area1 + pib1 + pontos_turisticos1 + pib_per_capita1 + (1 / densidade_populacional1);
+    super_poder1 = populacao1 + area1 + pib1 + pontos_turisticos1 + pib_per_capita1;
+    if (densidade_populacional1 != 0) {
+        super_poder1 += 1 / densidade_populacional1;
+    }
 
     // Exibir dados carta 1
     printf("\nDados da carta 1:\n");
@@ -82,7 +85,10 @@ int main() {
     pib_per_capita2 = pib2 / (float)populacao2;
 
     // Calcular super poder
-    super_poder2 = populacao2 + area2 + pib2 + pontos_turisticos2 + pib_per_capita2 + (1 / densidade_populacional2);
+    super_poder2 = populacao2 + area2 + pib2 + pontos_turisticos2 + pib_per_capita2;
+    if (densidade_populacional2 != 0) {
+        super_poder2 += 1 / densidade_populacional2;
+    }
 
     // Exibir dados carta 2
     printf("\nDados da carta 2:\n");
@@ -94,20 +100,19 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f\n", pib2);
     printf("Pontos turísticos: %d\n", pontos_turisticos2);
-printf("Densidade Populacional: %.2f\n", densidade_populacional2);
-printf("Pib per capita: %.2f\n", pib_per_capita2);
-printf("Super Poder: %.2f\n", super_poder2);
+    printf("Densidade Populacional: %.2f\n", densidade_populacional2);
+    printf("Pib per capita: %.2f\n", pib_per_capita2);
+    printf("Super Poder: %.2f\n", super_poder2);
 
-// Comparar as cartas
-printf("\nComparação de Cartas:\n");
-printf("População: %s venceu (%d)\n", (populacao1 > populacao2) ? "Carta 1" : "Carta 2", (populacao1 > populacao2) ? 1 : 0);
-printf("Área: %s venceu (%d)\n", (area1 > area2) ? "Carta 1" : "Carta 2", (area1 > area2) ? 1 : 0);
-printf("PIB: %s venceu (%d)\n", (pib1 > pib2) ? "Carta 1" : "Carta 2", (pib1 > pib2) ? 1 : 0);
-printf("Pontos Turísticos: %s venceu (%d)\n", (pontos_turisticos1 > pontos_turisticos2) ? "Carta 1" : "Carta 2", (pontos_turisticos1 > pontos_turisticos2) ? 1 : 0);
-printf("Densidade Populacional: %s venceu (%d)\n", (densidade_populacional1 < densidade_populacional2) ? "Carta 1" : "Carta 2", (densidade_populacional1 < densidade_populacional2) ? 1 : 0);
-printf("Pib per capita: %s venceu (%d)\n", (pib_per_capita1 > pib_per_capita2) ? "Carta 1" : "Carta 2", (pib_per_capita1 > pib_per_capita2) ? 1 : 0);
-printf("Super Poder: %s venceu (%d)\n", (super_poder1 > super_poder2) ? "Carta 1" : "Carta 2", (super_poder1 > super_poder2) ? 1 : 0);
+    // Comparar as cartas
+    printf("\nComparação de Cartas:\n");
+    printf("População: %s venceu\n", (populacao1 > populacao2) ? "Carta 1" : "Carta 2");
+    printf("Área: %s venceu\n", (area1 > area2) ? "Carta 1" : "Carta 2");
+    printf("PIB: %s venceu\n", (pib1 > pib2) ? "Carta 1" : "Carta 2");
+    printf("Pontos Turísticos: %s venceu\n", (pontos_turisticos1 > pontos_turisticos2) ? "Carta 1" : "Carta 2");
+    printf("Densidade Populacional: %s venceu\n", (densidade_populacional1 < densidade_populacional2) ? "Carta 1" : "Carta 2");
+    printf("Pib per capita: %s venceu\n", (pib_per_capita1 > pib_per_capita2) ? "Carta 1" : "Carta 2");
+    printf("Super Poder: %s venceu\n", (super_poder1 > super_poder2) ? "Carta 1" : "Carta 2");
 
-return 0;
+    return 0;
 }
-
